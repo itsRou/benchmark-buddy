@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+:root {
+  --bg-a: #ff9a76;
+  --bg-b: #ff6fb0;
+  --bg-c: #7b6cff;
+  --card: #ffffff;
+  --ink: #1f1147;
+  --ink-soft: #55507a;
+  --accent: #ff5da2;
+  --accent-2: #6c5ce7;
+  --gold: #ffb703;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--ink);
+  font-family: "Segoe UI", ui-rounded, system-ui, -apple-system, sans-serif;
+  background: linear-gradient(135deg, var(--bg-a), var(--bg-b) 45%, var(--bg-c));
+  background-attachment: fixed;
+  min-height: 100%;
+}
+
+.font-display {
+  font-family: ui-rounded, "SF Pro Rounded", "Segoe UI", system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-18px) rotate(4deg); }
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(14px) rotate(-5deg); }
+}
+
+.blob-float {
+  animation: float 7s ease-in-out infinite;
+}
+
+.blob-float-slow {
+  animation: floatSlow 9s ease-in-out infinite;
+}
+
+::selection {
+  background: var(--accent);
+  color: white;
+}
